@@ -1,0 +1,59 @@
+run project 
+    run api -->  python3 -m uvicorn src.api:app --reload
+    python3 -m streamlit run app.py --> from /app directory
+
+
+
+real-time-recommendation-system/
+│
+├── app/
+│   └── app.py
+│
+├── data/
+│   ├── raw/
+│   │   ├── users.csv
+│   │   ├── products.csv
+│   │   └── interactions.csv
+│   │
+│   └── processed/
+│       ├── users.csv
+│       ├── products.csv
+│       ├── interactions.csv
+│       ├── train.csv
+│       └── test.csv
+│
+├── models/
+│   ├── user_item_matrix.pkl
+│   ├── item_similarity.pkl
+│   ├── item_ids.pkl
+│   ├── tfidf_vectorizer.pkl
+│   ├── tfidf_matrix.pkl
+│   └── content_similarity.pkl
+│
+├── notebooks/
+│
+├── reports/
+│   ├── interaction_distribution.png
+│   ├── category_distribution.png
+│   ├── evaluation_results.csv
+│   └── model_comparison.csv
+│
+├── src/
+│   ├── __init__.py
+│   ├── generate_data.py
+│   ├── eda.py
+│   ├── preprocessing.py
+│   ├── popularity.py
+│   ├── collaborative_filtering.py
+│   ├── content_based.py
+│   ├── recommendation_engine.py
+│   ├── evaluation.py
+│   ├── model_comparison.py
+│   ├── database.py
+│   ├── init_database.py
+│   ├── save_models.py
+│   └── api.py
+│
+├── .gitignore
+├── requirements.txt
+└── README.md
